@@ -82,7 +82,42 @@ python3 three_body_beautiful.py
 
 ---
 
-## Stage 5: Ideas for Next Steps (not started)
-- [ ] Interactive initial conditions (click to place bodies)
-- [ ] N-body generalization (more than 3 bodies)
+## Stage 5: Course Module + Seminar + Paper (COMPLETE)
+
+### Goal
+Use AI models to predict the **livability of a planet** based on its movements around its host star (orbital dynamics in a planetary system).
+
+### Deliverables
+- `course_module/COURSE_MODULE.md` — 12-week ASTRO-AI 401 module: physics → data → ML → capstone (Dynamically-Stable Habitability Score). 10 learning outcomes, full weekly schedule, capstone brief, assessment, reading list (15 core papers).
+- `course_module/SEMINAR.md` — 90-minute seminar outline with live demo using existing `three_body_*.py` files.
+- `course_module/build_paper.py` — ReportLab generator for the PDF paper.
+- `course_module/paper.pdf` — short position paper "Toward AI-Driven Habitability Prediction from Orbital Dynamics" (abstract + 7 sections + 18 references).
+
+### Build the PDF
+```bash
+python3 course_module/build_paper.py
+```
+
+### Key references collected
+- Detection ML: Shallue & Vanderburg 2018 (AstroNet), Valizadegan 2022 (ExoMiner)
+- Habitability ML: Saha 2018, Bora/Saha 2016 (CDHS), Basak 2020
+- Stability ML: Tamayo 2020 (SPOCK)
+- Physics-informed NNs: Greydanus 2019 (HNN), Cranmer 2020 (LNN), Breen 2020 (3-body DNN)
+- Symbolic regression: Udrescu & Tegmark 2020 (AI Feynman), Lemos 2022
+- Physics: Kasting 1993, Kopparapu 2013 (CHZ), Laskar & Petit 2017 (AMD)
+- Indices: Schulze-Makuch 2011 (ESI/PHI), Saha 2018 (CEESA)
+
+### Datasets surveyed
+NASA Exoplanet Archive · PHL HEC · Kepler/TESS via MAST · Gaia DR3 · Kaggle Kepler
+
+### Tooling stack referenced for the capstone
+REBOUND · SPOCK · lightkurve · exoplanet (PyMC) · PySR · scikit-learn · XGBoost · PyTorch
+
+---
+
+## Stage 6: Ideas for Next Steps (not started)
+- [ ] Implement the capstone pipeline end-to-end (REBOUND + SPOCK + XGBoost on PHL-EC)
+- [ ] CHZ visualization across the HR diagram
+- [ ] HNN training notebook on two-body data (energy-conservation comparison)
+- [ ] Interactive initial conditions for `three_body_3d.py`
 - [ ] Save animation to MP4/GIF
